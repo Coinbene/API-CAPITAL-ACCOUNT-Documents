@@ -1,3 +1,6 @@
+# coinbene-capital-account-openapi-rest-interface-description)
+[中文版本](https://github.com/Coinbene/API-USDT-SWAP-Documents/blob/master/openapi-usdt-swap-rest.md)
+
 * [OpenAPI REST Interface for Funds Account](#openapi-rest-interface-for-funds-account)
       * [Basic information](#basic-information)
       * [Access restrictions](#access-restrictions)
