@@ -1,6 +1,13 @@
 # OpenAPI REST Interface for Funds Account
 
-[TOC]
+* [OpenAPI REST Interface for Funds Account](#openapi-rest-interface-for-funds-account)
+      * [Basic information](#basic-information)
+      * [Access restrictions](#access-restrictions)
+      * [Interface type](#interface-type)
+      * [Signature method](#signature-method)
+         * [Private Interface - Application for Currency Drawing Interface](#private-interface---application-for-currency-drawing-interface)
+         * [Private Interface - Query the List of Currency Addresses](#private-interface---query-the-list-of-currency-addresses)
+      * [Error code summary](#error-code-summary)
 
 ## Basic information
 - This article lists the baseurl http://openapi-capital.coinbene.com of REST interface.
