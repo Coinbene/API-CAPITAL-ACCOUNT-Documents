@@ -1,4 +1,4 @@
-
+OpenAPI REST Interface for Funds Account
 
 ## Basic information
 - This article lists the baseurl http://openapi-capital.coinbene.com of REST interface.
