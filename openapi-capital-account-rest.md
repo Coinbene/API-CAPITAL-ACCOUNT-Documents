@@ -201,6 +201,7 @@ chain   | string | 否 |  链
 
 
 返回结果参数
+
 名称   | 类型  | 说明
 ---------|--------|---------
 id   | string | 成功后返回的提币申请id
@@ -254,6 +255,7 @@ asset      | string | 是 | 资产名称，如BTC
 返回字段说明：
 
 名称   | 类型  | 说明
+
 ---------|--------|---------
 asset   | string | 资产名
 chain  | string | 
@@ -299,7 +301,7 @@ Response:
 ## 错误代码汇总
 
 错误代码     |  message
----|:---
+---|---
 12001 | "ACCESS_KEY"不能为空
 12002 | "ACCESS_SIGN"不能为空
 12003 | "ACCESS_TIMESTAMP"不能为空
