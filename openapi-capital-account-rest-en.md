@@ -1,5 +1,3 @@
-# OpenAPI REST Interface for Funds Account
-
 * [OpenAPI REST Interface for Funds Account](#openapi-rest-interface-for-funds-account)
       * [Basic information](#basic-information)
       * [Access restrictions](#access-restrictions)
