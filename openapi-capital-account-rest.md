@@ -248,6 +248,7 @@ Response:
 HTTP GET /api/capital/v1/deposit/address/list
 ```
 请求参数：
+
 名称  | 类型  | 是否必填  | 说明
 ---------|--------|---------|--------
 asset      | string | 是 | 资产名称，如BTC
@@ -263,7 +264,7 @@ address   | string | 冲币地址
 addressTag   | string | 
 depositLimit   | string | 冲币最小限额
 blockNumber   | string | 确认区块数量
-status   | string | 已实现盈亏 
+status   | string | 1可用，0不可用
 
 
 ```
