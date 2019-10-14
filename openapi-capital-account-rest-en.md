@@ -192,7 +192,7 @@ HTTP POST/api/capital/v1/withdraw/apply
 Request parameters:
 
 Name | Type | Is it mandatory | Description
----------|-------------------------------------------------------------------------------------------------------------------
+---------|--------|---------|--------
 Asset | string | is the | asset name, such as BTC
 Amount | string | is | withdrawal amount
 Address | string | is | withdrawal address
@@ -203,7 +203,7 @@ Chain | string | no | chain
 Return result parameters
 
 Name | Type | Description
--------|---------------------------------------------------------------------------------------------------------------------------
+---------|--------|---------
 ID | string | withdrawal application ID returned after success
 Asset | string | asset name, such as BTC
 Amount | string | Number of withdrawals
@@ -250,13 +250,13 @@ HTTP GET/api/capital/v1/deposit/address/list
 Request parameters:
 
 Name | Type | Is it mandatory | Description
----------|-------------------------------------------------------------------------------------------------------------------
+---------|--------|---------|--------
 Asset | string | is the | asset name, such as BTC
 
 Return field description:
 
 Name | Type | Description
--------|---------------------------------------------------------------------------------------------------------------------------
+---------|--------|---------
 Asset | string | asset name
 Chain | string | chain
 Address | string | currency address
@@ -301,7 +301,7 @@ Response:
 ## Error code summary
 
 Error code | message
-- - -
+---|---
 12001 | "ACCESS_KEY" cannot be empty
 12002 | "ACCESS_SIGN" cannot be empty
 12003 | "ACCESS_TIMESTAMP" cannot be empty
