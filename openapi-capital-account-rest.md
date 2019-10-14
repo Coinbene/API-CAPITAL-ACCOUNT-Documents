@@ -1,6 +1,5 @@
 # 资金账户相关OpenAPI REST接口
 
-[TOC]
 
 ## 基本信息
 - 本篇列出REST接口的baseurl http://openapi-capital.coinbene.com
