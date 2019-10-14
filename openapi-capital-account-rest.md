@@ -256,10 +256,9 @@ asset      | string | 是 | 资产名称，如BTC
 返回字段说明：
 
 名称   | 类型  | 说明
-
 ---------|--------|---------
 asset   | string | 资产名
-chain  | string | 
+chain  | string | 链
 address   | string | 冲币地址
 addressTag   | string | 
 depositLimit   | string | 冲币最小限额
