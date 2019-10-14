@@ -13,12 +13,12 @@
 - HTTP 504 indicates that the API server has submitted a request to the business core but failed to obtain a response. In particular, it should be noted that the 504 code does not mean that the request failed, but is unknown. It is likely that it has been implemented, or that it may fail, and further confirmation is needed.
 - It is possible for each interface to throw an exception. The exception response format is as follows:
 
-` ` ` `
+```
 {
 "Code": 10001,
 "Msg": "Invalid Paramater."
 }
-` ` ` `
+```
 - Specific error codes and their explanations are summarized in error codes.
 - GET method interface, parameters must be sent in query string.
 - The interface of the POST method and the parameters are sent in the request body (content type application / json).
@@ -47,12 +47,12 @@ ACCESS-SIGN Value Generation Rules:
 
 Sample interface request:
 - GET protocol interface has two cases:
-` ` ` `
+```
 PreHash String: 2019-10-12T09:33:43.126ZGET/api/capital/v1/deposit/address/list?Asset=XRP
-` ` ` `
+```
 
 
-` ` ` `
+```
 Url: http://domain name/api/capital/v1/deposit/address/list?Asset=XRP
 Method: GET
 Headers:
@@ -65,17 +65,17 @@ Cookie: locale = en_US
 Body:
 PreHash: 2019-10-12T09:33:43.126ZGET/api/capital/v1/deposit/address/list?Asset=XRP
 
-` ` ` `
+```
 
 
 - POST protocol interface:
-` ` ` `
+```
 PreHash String: 2019-10-12T09:40:19.683ZPOST/api/capital/v1/withdraw/apply {amount":"1","asset","BTC","address":"rHyS9xSwQUBqm5KwprUXDWxZcwEMZYQMJ","tag":"10000737"}
 
-` ` ` `
+```
 
 
-` ` ` `
+```
 Url: http://domain name/api/capital/v1/withdraw/apply
 Method: POST
 Headers:
@@ -87,11 +87,11 @@ Content-Type: application/json; charset = UTF-8
 Cookie: locale = en_US
 Body: {"amount": "1", "asset", "BTC", "address": "rHyS9xSwQUBqm5KjwprUXDWxZcwEMZYQMJ", "tag": "10000737"}
 PreHash: 2019-10-12T09:40:19.683ZPOST/api/capital/v1/withdraw/apply {"amount": "1", "asset", "BTC", "address": "rHyS9xSwQUBqm5KjwprUXDWxZcwEMZYQMJ", "tag": "10000737"}
-` ` ` `
+```
 - Signature algorithm verification:
 
 
-` ` ` `
+```
 Source string: 2019-05-25T03:20:30.362ZGET/api/swap/v2/account/info
 Secret: 9daf13ebd76c4f358fc885ca6ede5e27
 Generate sign string: a02a6428bb44ad338d020c55acee9dd40bbcb3d96cbe3e48dd6185e51e232aa2
@@ -179,16 +179,16 @@ Sn = sign ("2019-05-25T03:20:30.362ZGET/api/swap/v2/account/info", "9daf13ebd76c
 Self. assertEqual (sn, "a02a6428bb44ad338d020c55acee9dd40bbcb3d96cbe3e48dd6185e51e232aa2")
 
 
-` ` ` `
+```
 
 
 ### Private Interface - Application for Currency Drawing Interface
 
-` ` ` `
+```
 Used for API users to apply for withdrawal of money
 Speed Limitation Number: 1/1 second
 HTTP POST/api/capital/v1/withdraw/apply
-` ` ` `
+```
 Request parameters:
 
 Name | Type | Is it mandatory | Description
@@ -212,7 +212,7 @@ Tag | string | Note on the address of withdrawal
 Chain | string | chain
 
 
-` ` ` `
+```
 Request:
 Url: http://domain name/api/capital/v1/withdraw/apply
 Method: POST
@@ -238,15 +238,15 @@ Response:
 "Chain": "
 }
 }
-` ` ` `
+```
 ### Private Interface - Query the List of Currency Addresses
 
 
-` ` ` `
+```
 Get hold information of all contracts
 Speed limit rule: 1 time / 1 second
 HTTP GET/api/capital/v1/deposit/address/list
-` ` ` `
+```
 Request parameters:
 
 Name | Type | Is it mandatory | Description
@@ -266,7 +266,7 @@ BlockNumber | string | Confirm the number of blocks
 Status | string | 1 is available, 0 is unavailable
 
 
-` ` ` `
+```
 Request:
 Url: http://domain name/api/capital/v1/deposit/address/list?Asset=XRP
 Method: GET
@@ -295,7 +295,7 @@ Response:
 }
 ]
 }
-` ` ` `
+```
 
 
 ## Error code summary
