@@ -190,8 +190,9 @@ class TestUtil(unittest.TestCase):
 HTTP POST /api/capital/v1/withdraw/apply
 ```
 请求参数：
+
 名称  | 类型  | 是否必填  | 说明
----------|--------|---------|--------|
+---------|--------|---------|--------
 asset   | string | 是 | 资产名，如BTC
 amount   | string| 是  | 提币数量
 address   | string| 是  | 提币地址
@@ -201,7 +202,7 @@ chain   | string | 否 |  链
 
 返回结果参数
 名称   | 类型  | 说明
----------|--------|---------|--------|
+---------|--------|---------
 id   | string | 成功后返回的提币申请id
 asset   | string |  资产名，如BTC
 amount   | string|  提币数量
@@ -247,13 +248,13 @@ HTTP GET /api/capital/v1/deposit/address/list
 ```
 请求参数：
 名称  | 类型  | 是否必填  | 说明
----------|--------|---------|--------|
+---------|--------|---------|--------
 asset      | string | 是 | 资产名称，如BTC
 
 返回字段说明：
 
 名称   | 类型  | 说明
----------|--------|---------|--------|
+---------|--------|---------
 asset   | string | 资产名
 chain  | string | 
 address   | string | 冲币地址
