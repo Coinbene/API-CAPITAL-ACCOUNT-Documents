@@ -271,7 +271,6 @@ address   | string | 冲币地址
 addressTag   | string | 
 depositLimit   | string | 冲币最小限额
 blockNumber   | string | 确认区块数量
-status   | string | 1可用，0不可用
 
 
 ```
@@ -298,8 +297,7 @@ Response:
             "address":"rHyS9xSwQUBqm5KjwprUXDWxZcwEMZYQMJ",
             "addressTag":"10000737",
             "depositLimit":"25",
-            "blockNumber":"2",
-            "status":"1"
+            "blockNumber":"2"
         }
     ]
 }
