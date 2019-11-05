@@ -13,6 +13,7 @@
 ## Basic information
 - This article lists the baseurl  http://openapi-exchange.coinbene.com 或 https://openapi-exchange.coinbene.com of REST interface.
 - It is suggested that after the API is created, modify and add your own server exit IP to further enhance API security verification.
+-Domestic users suggest that the machine be bound to host, 104.16.127.19 openapi-exchange.coinbene.com
 - All interfaces respond in JSON format
 - All time and timestamps are UNIX time in milliseconds
 - HTTP 4XX error codes are used to indicate the content, behavior, and format of requests for errors
