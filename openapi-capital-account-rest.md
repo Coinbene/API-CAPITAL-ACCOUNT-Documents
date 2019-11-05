@@ -271,7 +271,7 @@ asset      | string | 是 | 资产名称，如BTC
 asset   | string | 资产名
 chain  | string | 链
 address   | string | 充币地址
-addressTag   | string | 
+addressTag   | string | 充值地址标签，部分特殊币种充值需用到标签 比如XRP EOS 如不需要不返回此值
 depositLimit   | string | 冲币最小限额
 blockNumber   | string | 区块确认数
 
