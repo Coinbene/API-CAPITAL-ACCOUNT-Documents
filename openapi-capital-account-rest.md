@@ -202,11 +202,11 @@ HTTP POST /api/capital/v1/withdraw/apply
 
 名称  | 类型  | 是否必填  | 说明
 ---------|--------|---------|--------
-asset   | string | 是 | 资产名，如BTC
+asset   | string | 是 | 充值的币种
 amount   | string| 是  | 提币数量
 address   | string| 是  | 提币地址
-tag   | string | 否 | 提币地址备注，根据实际地址情况填写
-chain   | string | 否 |  链
+tag   | string | 否 | 部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
+chain   | string | 否 |  部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 
 
 返回结果参数
@@ -214,11 +214,11 @@ chain   | string | 否 |  链
 名称   | 类型  | 说明
 ---------|--------|---------
 id   | string | 成功后返回的提币申请id
-asset   | string |  资产名，如BTC
+asset   | string |  充值的币种
 amount   | string|  提币数量
 address   | string|  提币地址
-tag   | string |  提币地址备注
-chain   | string | 链
+tag   | string |  部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
+chain   | string | 部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 
 
 ```
@@ -263,7 +263,7 @@ HTTP GET /api/capital/v1/deposit/address/list
 
 名称  | 类型  | 是否必填  | 说明
 ---------|--------|---------|--------
-asset      | string | 是 | 资产名称，如BTC
+asset      | string | 是 | 充值的币种
 
 返回字段说明：
 
