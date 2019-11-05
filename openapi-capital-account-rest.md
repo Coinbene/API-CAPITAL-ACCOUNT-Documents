@@ -269,12 +269,12 @@ asset      | string | 是 | 资产名称，如BTC
 
 名称   | 类型  | 说明
 ---------|--------|---------
-asset   | string | 资产名
-chain  | string | 链
+asset   | string | 充值的币种
+chain  | string | 部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 address   | string | 充币地址
-addressTag   | string | 充值地址标签，部分特殊币种充值需用到标签 比如XRP EOS 如不需要不返回此值
-depositLimit   | string | 冲币最小限额
-blockNumber   | string | 区块确认数
+addressTag   | string | 部分币种充值需用到此标签，比如XRP，EOS。如不需要则不返回此字段
+depositLimit   | string | 最小充值量，小于此数目的充值将不会被到账
+blockNumber   | string | 充值区块确认数
 
 
 ```
