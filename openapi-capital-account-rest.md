@@ -255,6 +255,9 @@ Response:
 限速规则：1次/1秒
 HTTP GET /api/capital/v1/deposit/address/list
 ```
+```
+注意：需要在网页或者移动端创建充值地址之后，这里才能获取到充值地址
+```
 请求参数：
 
 名称  | 类型  | 是否必填  | 说明
