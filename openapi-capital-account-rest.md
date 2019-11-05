@@ -205,7 +205,7 @@ HTTP POST /api/capital/v1/withdraw/apply
 asset   | string | 是 | 充值的币种
 amount   | string| 是  | 提币数量
 address   | string| 是  | 提币地址
-tag   | string | 否 | 部分币种充值需用到此标签，比如XRP，EOS。如不需要则不返回此字段
+addressTag   | string | 否 | 部分币种充值需用到此标签，比如XRP，EOS。如不需要则不返回此字段
 chain   | string | 否 |  部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 
 
@@ -217,7 +217,7 @@ id   | string | 成功后返回的提币申请id
 asset   | string |  充值的币种
 amount   | string|  提币数量
 address   | string|  提币地址
-tag   | string |  部分币种充值需用到此标签，比如XRP，EOS。如不需要则不返回此字段
+addressTag   | string |  部分币种充值需用到此标签，比如XRP，EOS。如不需要则不返回此字段
 chain   | string | 部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 
 
