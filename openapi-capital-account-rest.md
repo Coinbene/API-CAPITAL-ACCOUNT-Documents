@@ -267,10 +267,10 @@ asset      | string | 是 | 资产名称，如BTC
 ---------|--------|---------
 asset   | string | 资产名
 chain  | string | 链
-address   | string | 冲币地址
+address   | string | 充币地址
 addressTag   | string | 
 depositLimit   | string | 冲币最小限额
-blockNumber   | string | 确认区块数量
+blockNumber   | string | 区块确认数
 
 
 ```
