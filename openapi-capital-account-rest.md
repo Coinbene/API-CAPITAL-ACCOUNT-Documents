@@ -205,7 +205,7 @@ HTTP POST /api/capital/v1/withdraw/apply
 asset   | string | 是 | 充值的币种
 amount   | string| 是  | 提币数量
 address   | string| 是  | 提币地址
-addressTag   | string | 否 | 部分币种充值需用到此标签，比如XRP，EOS。如不需要则不返回此字段
+addressTag   | string | 否 | 部分币种充值需用到此标签，比如XRP，EOS。否则输入空字符串
 chain   | string | 否 |  部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 
 
@@ -217,7 +217,7 @@ id   | string | 成功后返回的提币申请id
 asset   | string |  充值的币种
 amount   | string|  提币数量
 address   | string|  提币地址
-addressTag   | string |  部分币种充值需用到此标签，比如XRP，EOS。如不需要则不返回此字段
+addressTag   | string |  部分币种充值需用到此标签，比如XRP，EOS。
 chain   | string | 部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 
 
@@ -272,7 +272,7 @@ asset      | string | 是 | 充值的币种
 asset   | string | 充值的币种
 chain  | string | 部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 address   | string | 充币地址
-addressTag   | string | 部分币种充值需用到此标签，比如XRP，EOS。如不需要则不返回此字段
+addressTag   | string | 部分币种充值需用到此标签，比如XRP，EOS。
 depositLimit   | string | 最小充值量，小于此数目的充值将不会被到账
 blockNumber   | string | 充值区块确认数
 
