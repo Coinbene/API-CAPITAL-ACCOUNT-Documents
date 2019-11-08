@@ -205,7 +205,7 @@ Name | Type | Is it mandatory | Description
 asset | string | is the | Recharge currency
 amount | string | is | Amount of money raised
 address | string | is | Coin address
-addressTag | string | no | This label is required for recharging some currencies, such as XRP and EOS. Do not return this field if not required
+addressTag | string | no | This label is required for recharging some currencies, such as XRP and EOS
 chain | string | no | Some currencies use this field to identify different chains. For example, usdt, where the value is "eth", "BTC"
 
 
@@ -217,7 +217,7 @@ ID | string | withdrawal application ID returned after success
 asset | string | Recharge currency
 amount | string | Amount of money raised
 address | string | Money withdrawal address
-addressTag | string | This label is required for recharging some currencies, such as XRP and EOS. Do not return this field if not required
+addressTag | string | This label is required for recharging some currencies, such as XRP and EOS. 
 chain | string | Some currencies use this field to identify different chains. For example, usdt, where the value is "eth", "BTC"
 
 
@@ -269,7 +269,7 @@ Name | Type | Description
 asset | string | Recharge currency
 chain | string | Some currencies use this field to identify different chains. For example, usdt, where the value is "eth", "BTC"
 address | string | Coin address
-addressTag | string|This label is required for recharging some currencies, such as XRP and EOS. Do not return this field if not required
+addressTag | string|This label is required for recharging some currencies, such as XRP and EOS. 
 depositLimit | string | Minimum recharging amount. Recharging less than this amount will not be received
 blockNumber | string | Number of recharge block confirmations
 
