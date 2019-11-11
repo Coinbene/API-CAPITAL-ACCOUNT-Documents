@@ -202,7 +202,7 @@ HTTP POST /api/capital/v1/withdraw/apply
 
 名称  | 类型  | 是否必填  | 说明
 ---------|--------|---------|--------
-asset   | string | 是 | 充值的币种
+asset   | string | 是 | 提币的币种
 amount   | string| 是  | 提币数量
 address   | string| 是  | 提币地址
 addressTag   | string | 否 | 部分币种充值需用到此标签，比如XRP，EOS。否则输入空字符串
@@ -214,7 +214,7 @@ chain   | string | 否 |  部分币种会用此字段来标识不同链。如USD
 名称   | 类型  | 说明
 ---------|--------|---------
 id   | string | 成功后返回的提币申请id
-asset   | string |  充值的币种
+asset   | string |  提币的币种
 amount   | string|  提币数量
 address   | string|  提币地址
 addressTag   | string |  部分币种充值需用到此标签，比如XRP，EOS。
