@@ -304,6 +304,66 @@ Response:
 }
 ```
 
+###Private interface - asset transfer interface
+
+
+```
+Obtain position information of all contracts
+Speed limit rule: 2 times / 1 second
+HTTP GET /api/capital/v1/asset/transfer
+```
+Request parameters:
+
+Name | type | required or not | description
+---|---|---|---
+Asset string is the name of the asset transferred
+Amount | string | yes | transfer quantity
+From string is the transfer out business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
+To string is to transfer to business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
+From instrumentid | string | no | the name of the leverage currency pair to be transferred out, which needs to be filled in only when it is transferred out from the leverage currency pair
+Toinstrumentid | string | no | name of the leverage currency pair to be transferred in. It is required to fill in only when it is transferred into the leverage currency pair
+
+
+Return field description:
+
+Name | type | description
+---|---|---
+Transferid | string | transfer ID
+Asset | string | asset name
+Amount | string | transfer quantity
+From string transfer out business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
+To string transfer to business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
+Result | string | success indicates successful transfer
+
+
+```
+Request:
+URL: http://domain_name/api/capital/v1/asset/transfer
+Method: POST
+Headers:
+Accept: application/json
+ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+ACCESS-SIGN: 98566ac857ef292bba71a7c5ffcab4647e40864bef2462886f25f72dc1f8f77c
+ACCESS-TIMESTAMP: 2019-11-11T04:02:41.628Z
+Content-Type: application/json; charset=UTF-8
+Cookie: locale=en_US
+Body: {"amount":"1","asset":"BTC","from":"spot","to":"margin","fromInstrumentId":"","toInstrumentId":"BTC/USDT"}
+preHash: 2019-11-11T04:02:41.628ZPOST/api/capital/v1/asset/transfer{"amount":"1","asset":"BTC","from":"spot","to":"margin","fromInstrumentId":"","toInstrumentId":"BTC/USDT"}
+
+Response:
+{
+"Code": 200,
+"Data": {
+"transferId":"643420339740823552",
+"asset":"BTC",
+"amount":"1.00000000",
+"from":"spot",
+"to":"margin",
+"result":"SUCCESS"
+}
+}
+```
+
 
 ## Error code summary
 
