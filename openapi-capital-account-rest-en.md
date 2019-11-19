@@ -1,14 +1,16 @@
 
 # OpenAPI REST Interface for Funds Account
 # [中文](https://github.com/Coinbene/API-CAPITAL-ACCOUNT-Documents/blob/master/openapi-capital-account-rest.md)
-   * [Basic information](#basic-information)
+   
+ * [Basic information](#basic-information)
       * [Access restrictions](#access-restrictions)
       * [Interface type](#interface-type)
       * [Signature method](#signature-method)
          * [Private Interface - Application for Currency Drawing Interface](#private-interface---application-for-currency-drawing-interface)
          * [Private Interface - Query the List of Currency Addresses](#private-interface---query-the-list-of-currency-addresses)
+         * [Private interface - asset transfer interface](#private-interface---asset-transfer-interface)
       * [Error code summary](#error-code-summary)
- 
+
 
 ## Basic information
 - This article lists the baseurl  http://openapi-exchange.coinbene.com 或 https://openapi-exchange.coinbene.com of REST interface.
