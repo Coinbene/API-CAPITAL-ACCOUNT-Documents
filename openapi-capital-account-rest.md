@@ -1,6 +1,6 @@
 
 [资金账户相关OpenAPI REST接口]
-   * [<a href="https://github.com/Coinbene/API-CAPITAL-ACCOUNT-Documents/blob/master/openapi-capital-account-rest-en.md">English</a>](#english)
+   * [<a href="https://github.com/Coinbene/API-CAPITAL-ACCOUNT-Documents/blob/master/openapi-capital-account-rest-en.md">English</a>]
       * [基本信息](#基本信息)
       * [访问限制](#访问限制)
       * [接口类型](#接口类型)
