@@ -316,24 +316,24 @@ Request parameters:
 
 Name | type | required or not | description
 ---|---|---|---
-Asset string is the name of the asset transferred
-Amount | string | yes | transfer quantity
-From string is the transfer out business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
-To string is to transfer to business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
-From instrumentid | string | no | the name of the leverage currency pair to be transferred out, which needs to be filled in only when it is transferred out from the leverage currency pair
-Toinstrumentid | string | no | name of the leverage currency pair to be transferred in. It is required to fill in only when it is transferred into the leverage currency pair
+asset string is the name of the asset transferred
+amount | string | yes | transfer quantity
+from | string |yes | business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
+to | string |yes| business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
+fromInstrumentid | string | no | the name of the leverage currency pair to be transferred out, which needs to be filled in only when it is transferred out from the leverage currency pair
+toInstrumentid | string | no | name of the leverage currency pair to be transferred in. It is required to fill in only when it is transferred into the leverage currency pair
 
 
 Return field description:
 
 Name | type | description
 ---|---|---
-Transferid | string | transfer ID
-Asset | string | asset name
-Amount | string | transfer quantity
-From string transfer out business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
-To string transfer to business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
-Result | string | success indicates successful transfer
+transferid | string | transfer ID
+asset | string | asset name
+amount | string | transfer quantity
+from | string | transfer out business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
+to | string | transfer to business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
+result | string | success indicates successful transfer
 
 
 ```
