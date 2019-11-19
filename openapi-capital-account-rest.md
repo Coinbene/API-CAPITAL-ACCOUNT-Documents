@@ -316,14 +316,15 @@ Response:
 HTTP GET /api/capital/v1/asset/transfer
 ```
 请求参数：
+
 名称  | 类型  | 是否必填  | 说明
 ---|---|---|---
-asset      | string | 是 | 划转的资产名称
-amount      | string | 是 | 划转数量
-from      | string | 是 | 转出业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin
-to      | string | 是 | 转入业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin
-fromInstrumentId      | string |  | 转出杠杆币对名称，只有从杠杆币对中转出才需要填写
-toInstrumentId      | string |  | 转入杠杆币对名称，只有转入到杠杆币对中才需要填写
+asset | string | 是 | 划转的资产名称
+amount | string | 是 | 划转数量
+from | string | 是 | 转出业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin
+to   | string | 是 | 转入业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin
+fromInstrumentId | string | 否 | 转出杠杆币对名称，只有从杠杆币对中转出才需要填写
+toInstrumentId | string | 否 | 转入杠杆币对名称，只有转入到杠杆币对中才需要填写
 
 
 返回字段说明：
