@@ -306,6 +306,65 @@ Response:
     ]
 }
 ```
+
+### 私有接口-资产划转接口
+
+
+```
+获取所有合约的持仓信息
+限速规则：2次/1秒
+HTTP GET /api/capital/v1/asset/transfer
+```
+请求参数：
+名称  | 类型  | 是否必填  | 说明
+---|---|---|---
+asset      | string | 是 | 划转的资产名称
+amount      | string | 是 | 划转数量
+from      | string | 是 | 转出业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin
+to      | string | 是 | 转入业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin
+fromInstrumentId      | string |  | 转出杠杆币对名称，只有从杠杆币对中转出才需要填写
+toInstrumentId      | string |  | 转入杠杆币对名称，只有转入到杠杆币对中才需要填写
+
+
+返回字段说明：
+
+名称   | 类型  | 说明
+---|---|---
+transferId   | string | 划转ID
+asset  | string | 资产名称
+amount   | string | 划转数量
+from   | string | 转出业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin
+to   | string | 转入业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin
+result   | string | SUCCESS 表示划转成功
+
+
+```
+Request:
+Url: http://域名/api/capital/v1/asset/transfer
+Method: POST
+Headers: 
+	Accept: application/json
+	ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+	ACCESS-SIGN: 98566ac857ef292bba71a7c5ffcab4647e40864bef2462886f25f72dc1f8f77c
+	ACCESS-TIMESTAMP: 2019-11-11T04:02:41.628Z
+	Content-Type: application/json; charset=UTF-8
+	Cookie: locale=en_US
+Body: {"amount":"1","asset":"BTC","from":"spot","to":"margin","fromInstrumentId":"","toInstrumentId":"BTC/USDT"}
+preHash: 2019-11-11T04:02:41.628ZPOST/api/capital/v1/asset/transfer{"amount":"1","asset":"BTC","from":"spot","to":"margin","fromInstrumentId":"","toInstrumentId":"BTC/USDT"}
+
+Response:
+{
+    "code":200,
+    "data":{
+        "transferId":"643420339740823552",
+        "asset":"BTC",
+        "amount":"1.00000000",
+        "from":"spot",
+        "to":"margin",
+        "result":"SUCCESS"
+    }
+}
+```
  
 
 ## 错误代码汇总
