@@ -304,7 +304,7 @@ Response:
 }
 ```
 
-###Private interface - asset transfer interface
+### Private interface - asset transfer interface
 
 
 ```
@@ -316,7 +316,7 @@ Request parameters:
 
 Name | type | required or not | description
 ---|---|---|---
-asset string is the name of the asset transferred
+asset | string | yes | the name of the asset transferred
 amount | string | yes | transfer quantity
 from | string |yes | business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
 to | string |yes| business account, enumeration value: Currency: spot, BTC contract: BTC contract, usdt contract: usdt contract, leverage: margin
