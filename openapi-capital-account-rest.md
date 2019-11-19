@@ -1,13 +1,13 @@
 
-# 资金账户相关OpenAPI REST接口
-# [English](https://github.com/Coinbene/API-CAPITAL-ACCOUNT-Documents/blob/master/openapi-capital-account-rest-en.md)
-   * [资金账户相关OpenAPI REST接口](#资金账户相关openapi-rest接口)
+* [资金账户相关OpenAPI REST接口](#资金账户相关openapi-rest接口)
+   * [<a href="https://github.com/Coinbene/API-CAPITAL-ACCOUNT-Documents/blob/master/openapi-capital-account-rest-en.md">English</a>](#english)
       * [基本信息](#基本信息)
       * [访问限制](#访问限制)
       * [接口类型](#接口类型)
       * [签名方式](#签名方式)
          * [私有接口-申请提币接口](#私有接口-申请提币接口)
          * [私有接口-查询充币地址列表](#私有接口-查询充币地址列表)
+         * [私有接口-资产划转接口](#私有接口-资产划转接口)
       * [错误代码汇总](#错误代码汇总)
 
 ## 基本信息
