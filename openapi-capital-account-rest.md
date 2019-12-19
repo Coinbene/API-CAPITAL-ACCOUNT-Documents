@@ -263,13 +263,13 @@ HTTP GET /api/capital/v1/deposit/address/list
 请求参数：
 
 名称  | 类型  | 是否必填  | 说明
----|---|---
+---|---|---|---
 asset      | string | 是 | 充值的币种
 
 返回字段说明：
 
 名称   | 类型  | 说明
----|---|---|---
+---|---|---
 asset   | string | 充值的币种
 chain  | string | 部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 address   | string | 充币地址
