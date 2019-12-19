@@ -449,7 +449,9 @@ Response:
 限速规则：1次/1秒
 HTTP GET /api/capital/v1/withdraw/history/single
 ```
+
 请求参数：
+
 名称  | 类型  | 是否必填  | 说明
 ---|---|---|---
 id      | string |是 | 提币申请id
