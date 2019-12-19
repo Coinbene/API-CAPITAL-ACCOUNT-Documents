@@ -366,6 +366,267 @@ Response:
     }
 }
 ```
+
+### 私有接口-查询划转记录列表接口
+
+```
+查询划转记录列表
+限速规则：1次/1秒
+HTTP GET /api/capital/v1/asset/transfer/history/list
+```
+请求参数：
+名称  | 类型  | 是否必填  | 说明
+---|---|---|---
+asset      | string | 是 | 划转的资产名称
+from      | string | 否 | 转出业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin，余币宝:financial，游乐场:game
+to      | string | 否 | 转入业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin，余币宝:financial，游乐场:game
+lastTransferId      | string |  | 分页使用。默认第一页传0；后续分页请求都用前一页最后一条记录id-1
+
+
+返回字段说明：
+
+名称   | 类型  | 说明
+---|---|---
+transferId   | string | 划转ID
+asset  | string | 资产名称
+amount   | string | 划转数量
+from   | string | 转出业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin，余币宝:financial，游乐场:game
+to   | string | 转入业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin，余币宝:financial，游乐场:game
+time   | string | 划转记录生成时间，国际时间
+
+
+```
+Url: http://域名/api/capital/v1/asset/transfer/history/list?asset=BTC&from=spot
+Method: GET
+Headers: 
+	Accept: application/json
+	ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+	ACCESS-SIGN: 6737c5f6625b5e95ef38fe6d1f5640bfa735ef28733603855b5bc444b4cc6ade
+	ACCESS-TIMESTAMP: 2019-12-13T04:11:44.381Z
+	Content-Type: application/json; charset=UTF-8
+	Cookie: locale=zh_CN
+Body: 
+preHash: 2019-12-13T04:11:44.381ZGET/api/capital/v1/asset/transfer/history/list?asset=BTC&from=spot
+ 
+
+Response:
+{
+    "code":200,
+    "data":[
+        {
+            "transferId":"120328",
+            "asset":"BTC",
+            "amount":"1",
+            "from":"spot",
+            "to":"btc-contract",
+            "time":"2019-12-13T03:30:20.000Z"
+        },
+        {
+            "transferId":"117886",
+            "asset":"BTC",
+            "amount":"1",
+            "from":"spot",
+            "to":"margin",
+            "time":"2019-11-11T04:02:43.000Z"
+        },
+        {
+            "transferId":"89246",
+            "asset":"BTC",
+            "amount":"2",
+            "from":"spot",
+            "to":"margin",
+            "time":"2019-10-11T04:23:21.000Z"
+        }
+    ]
+}
+```
+
+### 私有接口-查询指定提币记录接口
+```
+获取提币申请记录列表
+限速规则：1次/1秒
+HTTP GET /api/capital/v1/withdraw/history/single
+```
+请求参数：
+名称  | 类型  | 是否必填  | 说明
+---|---|---|---
+id      | string |是 | 提币申请id
+
+返回字段说明：
+
+名称   | 类型  | 说明
+---|---|---
+id   | string | 提币申请id
+asset  | string | 资产名称
+amount   | string | 提币数量
+from   | string | 提币地址
+addressTag   | string |
+chain   | string |部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
+fee   | string | 提币手续费
+time   | string | 划转记录生成时间，国际时间
+status  | string | 提币申请状态，0:初始状态；1:冻结状态；2:扣款成功；3:撤销状态；-1:冻结失败；-2:扣款失败
+
+
+```
+Url: http://域名/api/capital/v1/withdraw/history/single?id=692193
+Method: GET
+Headers: 
+	Accept: application/json
+	ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+	ACCESS-SIGN: 8aabc8b8bf5aaea952cbd834d0b8f0ab2cdd896f575fc7bcc6a6827d0d8e4e4a
+	ACCESS-TIMESTAMP: 2019-12-13T06:10:03.949Z
+	Content-Type: application/json; charset=UTF-8
+	Cookie: locale=en_US
+Body: 
+preHash: 2019-12-13T06:10:03.949ZGET/api/capital/v1/withdraw/history/single?id=692193
+
+Response:
+{
+    "code":200,
+    "data":{
+        "id":"692193",
+        "amount":"20",
+        "asset":"XRP",
+        "from":"rBaVrBysyomRmVpfFy3ZBTxBTNFzs4AkRq",
+        "addressTag":"106237",
+        "chain":"XRP",
+        "fee":"2",
+        "time":"2019-06-24T02:32:02.000Z",
+        "status":"2"
+    }
+}
+```
+
+### 私有接口-查询提币记录列表接口
+```
+获取指定提币申请记录信息
+限速规则：1次/1秒
+HTTP GET /api/capital/v1/withdraw/history/list
+```
+请求参数：
+名称  | 类型  | 是否必填  | 说明
+---|---|---|---
+asset      | string |否 | 划转的资产名称
+lastId      | string | | 分页使用。默认第一页传0；后续分页请求都用前一页最后一条记录id-1
+
+
+返回字段说明：
+
+名称   | 类型  | 说明
+---|---|---
+id   | string | 提币申请id
+asset  | string | 资产名称
+amount   | string | 提币数量
+from   | string | 提币地址
+addressTag   | string |
+chain   | string |部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
+fee   | string | 提币手续费
+time   | string | 划转记录生成时间，国际时间
+status  | string | 提币申请状态，0:初始状态；1:冻结状态；2:扣款成功；3:撤销状态；-1:冻结失败；-2:扣款失败
+
+
+```
+Url: http://域名/api/capital/v1/withdraw/history/list
+Method: GET
+Headers: 
+	Accept: application/json
+	ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+	ACCESS-SIGN: 50e8684796a71843de5682eb22cdbd6c353d970b7f519c3f30ac7dc677f9734c
+	ACCESS-TIMESTAMP: 2019-12-13T04:34:33.050Z
+	Content-Type: application/json; charset=UTF-8
+	Cookie: locale=en_US
+Body: 
+preHash: 2019-12-13T04:34:33.050ZGET/api/capital/v1/withdraw/history/list
+
+Response:
+{
+    "code":200,
+    "data":[
+        {
+            "id":"692193",
+            "amount":"20",
+            "asset":"XRP",
+            "from":"rBaVrBysyomRmVpfFy3ZBTxBTNFzs4AkRq",
+            "addressTag":"106237",
+            "chain":"XRP",
+            "fee":"2",
+            "time":"2019-06-24T02:32:02.000Z",
+            "status":"2"
+        },
+        {
+            "id":"692192",
+            "amount":"20",
+            "asset":"XRP",
+            "from":"rBaVrBysyomRmVpfFy3ZBTxBTNFzs4AkRq",
+            "addressTag":"106237",
+            "chain":"XRP",
+            "fee":"2",
+            "time":"2019-06-24T01:32:02.000Z",
+            "status":"2"
+        }
+    ]
+}
+```
+
+### 私有接口-查询充币记录列表接口
+```
+获取充币记录列表
+限速规则：1次/1秒
+HTTP GET /api/capital/v1/deposit/history/list
+```
+请求参数：
+名称  | 类型  | 是否必填  | 说明
+---|---|---|---
+asset      | string |否 | 充币资产
+lastId      | string | | 分页使用。默认第一页传0；后续分页请求都用前一页最后一条记录id-1
+
+返回字段说明：
+
+名称   | 类型  | 说明
+---|---|---
+id   | string | 充币记录id
+asset  | string | 充币资产
+amount   | string | 充币数量
+chain   | string |部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
+time   | string | 充币记录生成时间，国际时间
+status  | string | 充币状态，1:充币成功；-1:充币失败
+
+```
+Url: http://域名/api/capital/v1/deposit/history/list
+Method: GET
+Headers: 
+	Accept: application/json
+	ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+	ACCESS-SIGN: 8b5a692ec9f9dfacc6c11373742d5acfc6045fdba714c42e8b4bdac2af1708fb
+	ACCESS-TIMESTAMP: 2019-12-13T06:18:45.293Z
+	Content-Type: application/json; charset=UTF-8
+	Cookie: locale=en_US
+Body: 
+preHash: 2019-12-13T06:18:45.293ZGET/api/capital/v1/deposit/history/list
+
+Response:
+{
+    "code":200,
+    "data":[
+        {
+            "id":"10051",
+            "asset":"USDT",
+            "amount":"2261.72",
+            "chain":"ETH",
+            "time":"2019-11-24T11:12:11.000Z",
+            "status":"1"
+        },
+        {
+            "id":"10021",
+            "asset":"USDT",
+            "amount":"2261.72",
+            "chain":"BTC",
+            "time":"2019-11-24T10:12:11.000Z",
+            "status":"1"
+        }
+    ]
+}
+```
  
 
 ## 错误代码汇总
