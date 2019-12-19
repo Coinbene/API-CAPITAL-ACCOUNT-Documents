@@ -471,7 +471,7 @@ Name | Type | Description
 id | string | withdrawal application id
 asset | string | asset name
 amount | string | Withdrawal Amount
-from | string | Withdrawal Address
+to | string | Withdrawal Address
 addressTag | string | Some currencies need to use this tag, such as XRP, EOS. Otherwise enter empty string
 chain | string | Some currencies use this field to identify different chains. Such as USDT, here the value is "ETH", "BTC"
 fee | string | Withdrawal Fee
@@ -499,7 +499,7 @@ Response:
         "id": "692193",
         "amount": "20",
         "asset": "XRP",
-        "from": "rBaVrBysyomRmVpfFy3ZBTxBTNFzs4AkRq",
+        "to": "rBaVrBysyomRmVpfFy3ZBTxBTNFzs4AkRq",
         "addressTag": "106237",
         "chain": "XRP",
         "fee": "2",
@@ -531,7 +531,7 @@ Name | Type | Description
 id | string | withdrawal application id
 asset | string | asset name
 amount | string | Withdrawal Amount
-from | string | Withdrawal Address
+to | string | Withdrawal Address
 addressTag | string | Some currencies need to use this tag, such as XRP, EOS. Otherwise enter empty string
 chain | string | Some currencies use this field to identify different chains. Such as USDT, here the value is "ETH", "BTC"
 fee | string | Withdrawal Fee
@@ -560,7 +560,7 @@ Response:
             "id": "692193",
             "amount": "20",
             "asset": "XRP",
-            "from": "rBaVrBysyomRmVpfFy3ZBTxBTNFzs4AkRq",
+            "to": "rBaVrBysyomRmVpfFy3ZBTxBTNFzs4AkRq",
             "addressTag": "106237",
             "chain": "XRP",
             "fee": "2",
@@ -571,7 +571,7 @@ Response:
             "id": "692192",
             "amount": "20",
             "asset": "XRP",
-            "from": "rBaVrBysyomRmVpfFy3ZBTxBTNFzs4AkRq",
+            "to": "rBaVrBysyomRmVpfFy3ZBTxBTNFzs4AkRq",
             "addressTag": "106237",
             "chain": "XRP",
             "fee": "2",
