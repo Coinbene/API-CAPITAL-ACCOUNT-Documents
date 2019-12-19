@@ -6,7 +6,7 @@
       * [Access restrictions](#access-restrictions)
       * [Interface type](#interface-type)
       * [Signature method](#signature-method)
-      * [Private Interface - Application for Currency Drawing Interface](#private-interface---application-for-currency-drawing-interface)
+         * [Private Interface - Application for Currency Drawing Interface](#private-interface---application-for-currency-drawing-interface)
          * [Private Interface - Query the List of Currency Addresses](#private-interface---query-the-list-of-currency-addresses)
          * [Private interface - asset transfer interface](#private-interface---asset-transfer-interface)
          * [Private interface-query transfer record list interface](#private-interface-query-transfer-record-list-interface)
