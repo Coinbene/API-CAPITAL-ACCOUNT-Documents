@@ -239,16 +239,17 @@ PreHash: 2019-10-12T09:40:19.683ZPOST/api/capital/v1/withdraw/apply {"amount": "
 
 Response:
 {
-"Code": 200,
-"Data": {
-"Id": "123",
-"Amount": "10",
-"Asset": "BTC",
-"Address": "rHyS9xSwQUBqm5KjwprUXDWxZcwEMZYQMJ",
-"Tag":"",
-"Chain": ""
+    "Code":200,
+    "Data":{
+        "Id":"123",
+        "Amount":"10",
+        "Asset":"BTC",
+        "Address":"rHyS9xSwQUBqm5KjwprUXDWxZcwEMZYQMJ",
+        "Tag":"",
+        "Chain":""
+    }
 }
-}
+
 ```
 ### Private Interface - Query the List of Currency Addresses
 
@@ -292,18 +293,20 @@ PreHash: 2019-10-12T09:40:20.546ZGET/api/capital/v1/deposit/address/list?Asset=X
 
 Response:
 {
-"Code": 200,
-"Data":
-{
-"Asset": "XRP",
-"Chain": "XRP",
-"Address": "rHyS9xSwQUBqm5KjwprUXDWxZcwEMZYQMJ",
-"AddressTag": "10000737",
-"Deposit Limit": "25",
-"Block Number": "2"
+    "Code":200,
+    "Data":[
+        {
+            "Asset":"XRP",
+            "Chain":"XRP",
+            "Address":"rHyS9xSwQUBqm5KjwprUXDWxZcwEMZYQMJ",
+            "AddressTag":"10000737",
+            "Deposit Limit":"25",
+            "Block Number":"2"
+        }
+    ]
 }
-]
-}
+
+
 ```
 
 ### Private interface - asset transfer interface
@@ -354,16 +357,17 @@ preHash: 2019-11-11T04:02:41.628ZPOST/api/capital/v1/asset/transfer{"amount":"1"
 
 Response:
 {
-"Code": 200,
-"Data": {
-"transferId":"643420339740823552",
-"asset":"BTC",
-"amount":"1.00000000",
-"from":"spot",
-"to":"margin",
-"result":"SUCCESS"
+    "Code":200,
+    "Data":{
+        "transferId":"643420339740823552",
+        "asset":"BTC",
+        "amount":"1.00000000",
+        "from":"spot",
+        "to":"margin",
+        "result":"SUCCESS"
+    }
 }
-}
+
 ```
 
 
