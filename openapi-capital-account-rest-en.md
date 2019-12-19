@@ -471,7 +471,7 @@ Name | Type | Description
 id | string | withdrawal application id
 asset | string | asset name
 amount | string | Withdrawal Amount
-to | string | Withdrawal Address
+to | string | Withdrawal to Address
 addressTag | string | Some currencies need to use this tag, such as XRP, EOS. Otherwise enter empty string
 chain | string | Some currencies use this field to identify different chains. Such as USDT, here the value is "ETH", "BTC"
 fee | string | Withdrawal Fee
@@ -531,7 +531,7 @@ Name | Type | Description
 id | string | withdrawal application id
 asset | string | asset name
 amount | string | Withdrawal Amount
-to | string | Withdrawal Address
+to | string | Withdrawal to Address
 addressTag | string | Some currencies need to use this tag, such as XRP, EOS. Otherwise enter empty string
 chain | string | Some currencies use this field to identify different chains. Such as USDT, here the value is "ETH", "BTC"
 fee | string | Withdrawal Fee
