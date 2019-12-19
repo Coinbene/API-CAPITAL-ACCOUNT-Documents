@@ -367,6 +367,273 @@ Response:
 ```
 
 
+### Private interface-query transfer record list interface
+
+`` `
+Query Transfer List
+Speed ​​limit rule: 1 time / 1 second
+HTTP GET / api / capital / v1 / asset / transfer / history / list
+`` `
+Request parameters:
+
+Name | Type | Required | Description
+--- | --- | --- | ---
+asset | string | Yes | Transferred asset name
+from | string | No | Transfer out of the business account, enumeration value: currency: spot, btc contract: btc-contract, usdt contract: usdt-contract, leverage: margin, Yubibao: financial, playground: game
+to | string | No | Transfer to business account, enumeration value: currency: spot, btc contract: btc-contract, usdt contract: usdt-contract, leverage: margin, yubaobao: financial, playground: game
+lastTransferId | string | | Pagination. By default, the first page is passed 0; subsequent page requests use the last record of the previous page id-1
+
+
+Return field description:
+
+Name | Type | Description
+--- | --- | ---
+transferId | string | Transfer ID
+asset | string | asset name
+amount | string | Stroke amount
+from | string | Transfer out of the business account, enumerated values: coins: spot, btc contract: btc-contract, usdt contract: usdt-contract, leverage: margin, Yu coin treasure: financial, playground: game
+to | string | Transfer to business account, enumeration value: currency: spot, btc contract: btc-contract, usdt contract: usdt-contract, leverage: margin, Yu coin treasure: financial, playground: game
+time | string | Time of transfer record generation, international time
+
+
+`` `
+Url: http: // domain name / api / capital / v1 / asset / transfer / history / list? Asset = BTC & from = spot
+Method: GET
+Headers:
+Accept: application / json
+ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+ACCESS-SIGN: 6737c5f6625b5e95ef38fe6d1f5640bfa735ef28733603855b5bc444b4cc6ade
+ACCESS-TIMESTAMP: 2019-12-13T04: 11: 44.381Z
+Content-Type: application / json; charset = UTF-8
+Cookie: locale = zh_CN
+Body:
+preHash: 2019-12-13T04: 11: 44.381ZGET / api / capital / v1 / asset / transfer / history / list? asset = BTC & from = spot
+ 
+
+Response:
+{
+    "code": 200,
+    "data": [
+        {
+            "transferId": "120328",
+            "asset": "BTC",
+            "amount": "1",
+            "from": "spot",
+            "to": "btc-contract",
+            "time": "2019-12-13T03: 30: 20.000Z"
+        },
+        {
+            "transferId": "117886",
+            "asset": "BTC",
+            "amount": "1",
+            "from": "spot",
+            "to": "margin",
+            "time": "2019-11-11T04: 02: 43.000Z"
+        },
+        {
+            "transferId": "89246",
+            "asset": "BTC",
+            "amount": "2",
+            "from": "spot",
+            "to": "margin",
+            "time": "2019-10-11T04: 23: 21.000Z"
+        }
+    ]
+}
+`` `
+
+### Private interface-query the specified withdrawal record interface
+`` `
+Get the list of withdrawal application records
+Speed ​​limit rule: 1 time / 1 second
+HTTP GET / api / capital / v1 / withdraw / history / single
+`` `
+
+Request parameters:
+
+Name | Type | Required | Description
+--- | --- | --- | ---
+id | string | yes | withdrawal application id
+
+Return field description:
+
+Name | Type | Description
+--- | --- | ---
+id | string | withdrawal application id
+asset | string | asset name
+amount | string | Withdrawal Amount
+from | string | Withdrawal Address
+addressTag | string | Some currencies need to use this tag, such as XRP, EOS. Otherwise enter empty string
+chain | string | Some currencies use this field to identify different chains. Such as USDT, here the value is "ETH", "BTC"
+fee | string | Withdrawal Fee
+time | string | Time of transfer record generation, international time
+status | string | Withdrawal application status, 0: initial status; 1: frozen status; 2: successful debit; 3: cancelled status; -1: frozen failed; -2: failed charging
+
+
+`` `
+Url: http: // domain name / api / capital / v1 / withdraw / history / single? Id = 692193
+Method: GET
+Headers:
+Accept: application / json
+ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+ACCESS-SIGN: 8aabc8b8bf5aaea952cbd834d0b8f0ab2cdd896f575fc7bcc6a6827d0d8e4e4a
+ACCESS-TIMESTAMP: 2019-12-13T06: 10: 03.949Z
+Content-Type: application / json; charset = UTF-8
+Cookie: locale = en_US
+Body:
+preHash: 2019-12-13T06: 10: 03.949ZGET / api / capital / v1 / withdraw / history / single? id = 692193
+
+Response:
+{
+    "code": 200,
+    "data": {
+        "id": "692193",
+        "amount": "20",
+        "asset": "XRP",
+        "from": "rBaVrBysyomRmVpfFy3ZBTxBTNFzs4AkRq",
+        "addressTag": "106237",
+        "chain": "XRP",
+        "fee": "2",
+        "time": "2019-06-24T02: 32: 02.000Z",
+        "status": "2"
+    }
+}
+`` `
+
+
+### Private interface-query the list of withdrawal records interface
+`` `
+Get the specified withdrawal application record information
+Speed ​​limit rule: 1 time / 1 second
+HTTP GET / api / capital / v1 / withdraw / history / list
+`` `
+Request parameters:
+
+Name | Type | Required | Description
+--- | --- | --- | ---
+asset | string | No | Transferred asset name
+lastId | string | No | Paging. By default, the first page is passed 0; subsequent page requests use the last record of the previous page id-1
+
+
+Return field description:
+
+Name | Type | Description
+--- | --- | ---
+id | string | withdrawal application id
+asset | string | asset name
+amount | string | Withdrawal Amount
+from | string | Withdrawal Address
+addressTag | string | Some currencies need to use this tag, such as XRP, EOS. Otherwise enter empty string
+chain | string | Some currencies use this field to identify different chains. Such as USDT, here the value is "ETH", "BTC"
+fee | string | Withdrawal Fee
+time | string | Time of transfer record generation, international time
+status | string | Withdrawal application status, 0: initial status; 1: frozen status; 2: successful debit; 3: cancelled status; -1: frozen failed; -2: failed charging
+
+
+`` `
+Url: http: // domain name / api / capital / v1 / withdraw / history / list
+Method: GET
+Headers:
+Accept: application / json
+ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+ACCESS-SIGN: 50e8684796a71843de5682eb22cdbd6c353d970b7f519c3f30ac7dc677f9734c
+ACCESS-TIMESTAMP: 2019-12-13T04: 34: 33.050Z
+Content-Type: application / json; charset = UTF-8
+Cookie: locale = en_US
+Body:
+preHash: 2019-12-13T04: 34: 33.050ZGET / api / capital / v1 / withdraw / history / list
+
+Response:
+{
+    "code": 200,
+    "data": [
+        {
+            "id": "692193",
+            "amount": "20",
+            "asset": "XRP",
+            "from": "rBaVrBysyomRmVpfFy3ZBTxBTNFzs4AkRq",
+            "addressTag": "106237",
+            "chain": "XRP",
+            "fee": "2",
+            "time": "2019-06-24T02: 32: 02.000Z",
+            "status": "2"
+        },
+        {
+            "id": "692192",
+            "amount": "20",
+            "asset": "XRP",
+            "from": "rBaVrBysyomRmVpfFy3ZBTxBTNFzs4AkRq",
+            "addressTag": "106237",
+            "chain": "XRP",
+            "fee": "2",
+            "time": "2019-06-24T01: 32: 02.000Z",
+            "status": "2"
+        }
+    ]
+}
+`` `
+
+### Private interface-query the list of charging records interface
+`` `
+Get list of deposit records
+Speed ​​limit rule: 1 time / 1 second
+HTTP GET / api / capital / v1 / deposit / history / list
+`` `
+Request parameters:
+
+Name | Type | Required | Description
+--- | --- | --- | ---
+asset | string | No | Deposit Asset
+lastId | string | No | Paging. By default, the first page is passed 0; subsequent page requests use the last record of the previous page id-1
+
+Return field description:
+
+Name | Type | Description
+--- | --- | ---
+id | string | deposit record id
+asset | string | Deposit Asset
+amount | string | Credit amount
+chain | string | Some currencies use this field to identify different chains. Such as USDT, here the value is "ETH", "BTC"
+time | string | Generation time of deposit record, international time
+status | string | Deposit status, 1: successful deposit; -1: failed deposit
+
+`` `
+Url: http: // domain name / api / capital / v1 / deposit / history / list
+Method: GET
+Headers:
+Accept: application / json
+ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+ACCESS-SIGN: 8b5a692ec9f9dfacc6c11373742d5acfc6045fdba714c42e8b4bdac2af1708fb
+ACCESS-TIMESTAMP: 2019-12-13T06: 18: 45.293Z
+Content-Type: application / json; charset = UTF-8
+Cookie: locale = en_US
+Body:
+preHash: 2019-12-13T06: 18: 45.293ZGET / api / capital / v1 / deposit / history / list
+
+Response:
+{
+    "code": 200,
+    "data": [
+        {
+            "id": "10051",
+            "asset": "USDT",
+            "amount": "2261.72",
+            "chain": "ETH",
+            "time": "2019-11-24T11: 12: 11.000Z",
+            "status": "1"
+        },
+        {
+            "id": "10021",
+            "asset": "USDT",
+            "amount": "2261.72",
+            "chain": "BTC",
+            "time": "2019-11-24T10: 12: 11.000Z",
+            "status": "1"
+        }
+    ]
+}
+`` `
+
 ## Error code summary
 
 Error code | message
