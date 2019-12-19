@@ -369,11 +369,11 @@ Response:
 
 ### Private interface-query transfer record list interface
 
-`` `
+```
 Query Transfer List
 Speed ​​limit rule: 1 time / 1 second
-HTTP GET / api / capital / v1 / asset / transfer / history / list
-`` `
+HTTP GET  /api/capital/v1/asset/transfer/history/list
+```
 Request parameters:
 
 Name | Type | Required | Description
@@ -396,8 +396,8 @@ to | string | Transfer to business account, enumeration value: currency: spot, b
 time | string | Time of transfer record generation, international time
 
 
-`` `
-Url: http: // domain name / api / capital / v1 / asset / transfer / history / list? Asset = BTC & from = spot
+```
+Url: http: //domain/api/capital/v1/asset/transfer/history/list?asset=BTC&from=spot
 Method: GET
 Headers:
 Accept: application / json
@@ -407,7 +407,7 @@ ACCESS-TIMESTAMP: 2019-12-13T04: 11: 44.381Z
 Content-Type: application / json; charset = UTF-8
 Cookie: locale = zh_CN
 Body:
-preHash: 2019-12-13T04: 11: 44.381ZGET / api / capital / v1 / asset / transfer / history / list? asset = BTC & from = spot
+preHash: 2019-12-13T04:11:44.381ZGET/api/capital/v1/asset/transfer/history/list?asset=BTC&from=spot
  
 
 Response:
@@ -440,14 +440,14 @@ Response:
         }
     ]
 }
-`` `
+```
 
 ### Private interface-query the specified withdrawal record interface
-`` `
+```
 Get the list of withdrawal application records
 Speed ​​limit rule: 1 time / 1 second
-HTTP GET / api / capital / v1 / withdraw / history / single
-`` `
+HTTP GET /api/capital/v1/withdraw/history/single
+```
 
 Request parameters:
 
@@ -470,8 +470,8 @@ time | string | Time of transfer record generation, international time
 status | string | Withdrawal application status, 0: initial status; 1: frozen status; 2: successful debit; 3: cancelled status; -1: frozen failed; -2: failed charging
 
 
-`` `
-Url: http: // domain name / api / capital / v1 / withdraw / history / single? Id = 692193
+```
+Url: http: //domain/api/capital/v1/withdraw/history/single?id=692193
 Method: GET
 Headers:
 Accept: application / json
@@ -481,7 +481,7 @@ ACCESS-TIMESTAMP: 2019-12-13T06: 10: 03.949Z
 Content-Type: application / json; charset = UTF-8
 Cookie: locale = en_US
 Body:
-preHash: 2019-12-13T06: 10: 03.949ZGET / api / capital / v1 / withdraw / history / single? id = 692193
+preHash: 2019-12-13T06:10:03.949ZGET/api/capital/v1/withdraw/history/single?id=692193
 
 Response:
 {
@@ -498,15 +498,15 @@ Response:
         "status": "2"
     }
 }
-`` `
+```
 
 
 ### Private interface-query the list of withdrawal records interface
-`` `
+```
 Get the specified withdrawal application record information
 Speed ​​limit rule: 1 time / 1 second
-HTTP GET / api / capital / v1 / withdraw / history / list
-`` `
+HTTP GET /api/capital/v1/withdraw/history/list
+```
 Request parameters:
 
 Name | Type | Required | Description
@@ -530,8 +530,8 @@ time | string | Time of transfer record generation, international time
 status | string | Withdrawal application status, 0: initial status; 1: frozen status; 2: successful debit; 3: cancelled status; -1: frozen failed; -2: failed charging
 
 
-`` `
-Url: http: // domain name / api / capital / v1 / withdraw / history / list
+```
+Url: http: //domain/api/capital/v1/withdraw/history/list
 Method: GET
 Headers:
 Accept: application / json
@@ -541,7 +541,7 @@ ACCESS-TIMESTAMP: 2019-12-13T04: 34: 33.050Z
 Content-Type: application / json; charset = UTF-8
 Cookie: locale = en_US
 Body:
-preHash: 2019-12-13T04: 34: 33.050ZGET / api / capital / v1 / withdraw / history / list
+preHash: 2019-12-13T04:34:33.050ZGET/api/capital/v1/withdraw/history/list
 
 Response:
 {
@@ -571,14 +571,14 @@ Response:
         }
     ]
 }
-`` `
+```
 
 ### Private interface-query the list of charging records interface
-`` `
+```
 Get list of deposit records
 Speed ​​limit rule: 1 time / 1 second
-HTTP GET / api / capital / v1 / deposit / history / list
-`` `
+HTTP GET /api/capital/v1/deposit/history/list
+```
 Request parameters:
 
 Name | Type | Required | Description
@@ -597,42 +597,43 @@ chain | string | Some currencies use this field to identify different chains. Su
 time | string | Generation time of deposit record, international time
 status | string | Deposit status, 1: successful deposit; -1: failed deposit
 
-`` `
-Url: http: // domain name / api / capital / v1 / deposit / history / list
+
+```
+Url: http://domain/api/capital/v1/deposit/history/list
 Method: GET
-Headers:
-Accept: application / json
-ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
-ACCESS-SIGN: 8b5a692ec9f9dfacc6c11373742d5acfc6045fdba714c42e8b4bdac2af1708fb
-ACCESS-TIMESTAMP: 2019-12-13T06: 18: 45.293Z
-Content-Type: application / json; charset = UTF-8
-Cookie: locale = en_US
-Body:
-preHash: 2019-12-13T06: 18: 45.293ZGET / api / capital / v1 / deposit / history / list
+Headers: 
+	Accept: application/json
+	ACCESS-KEY: 2c8b514c28b6404f0d0333b958379484
+	ACCESS-SIGN: 8b5a692ec9f9dfacc6c11373742d5acfc6045fdba714c42e8b4bdac2af1708fb
+	ACCESS-TIMESTAMP: 2019-12-13T06:18:45.293Z
+	Content-Type: application/json; charset=UTF-8
+	Cookie: locale=en_US
+Body: 
+preHash: 2019-12-13T06:18:45.293ZGET/api/capital/v1/deposit/history/list
 
 Response:
 {
-    "code": 200,
-    "data": [
-        {
-            "id": "10051",
-            "asset": "USDT",
-            "amount": "2261.72",
-            "chain": "ETH",
-            "time": "2019-11-24T11: 12: 11.000Z",
-            "status": "1"
-        },
-        {
-            "id": "10021",
-            "asset": "USDT",
-            "amount": "2261.72",
-            "chain": "BTC",
-            "time": "2019-11-24T10: 12: 11.000Z",
-            "status": "1"
-        }
-    ]
+    "code":200,
+    "data":[
+        {
+            "id":"10051",
+            "asset":"USDT",
+            "amount":"2261.72",
+            "chain":"ETH",
+            "time":"2019-11-24T11:12:11.000Z",
+            "status":"1"
+        },
+        {
+            "id":"10021",
+            "asset":"USDT",
+            "amount":"2261.72",
+            "chain":"BTC",
+            "time":"2019-11-24T10:12:11.000Z",
+            "status":"1"
+        }
+    ]
 }
-`` `
+```
 
 ## Error code summary
 
