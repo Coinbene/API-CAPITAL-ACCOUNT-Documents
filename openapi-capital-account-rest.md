@@ -467,7 +467,7 @@ id      | string |是 | 提币申请id
 id   | string | 提币申请id
 asset  | string | 资产名称
 amount   | string | 提币数量
-to   | string | 提币地址
+to   | string | 提币到账地址
 addressTag   | string | 部分币种充值需用到此标签，比如XRP，EOS。否则输入空字符串
 chain   | string |部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 fee   | string | 提币手续费
@@ -526,7 +526,7 @@ lastId      | string |否 | 分页使用。默认第一页传0；后续分页请
 id   | string | 提币申请id
 asset  | string | 资产名称
 amount   | string | 提币数量
-to   | string | 提币地址
+to   | string | 提币到账地址
 addressTag   | string |部分币种充值需用到此标签，比如XRP，EOS。否则输入空字符串
 chain   | string |部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 fee   | string | 提币手续费
