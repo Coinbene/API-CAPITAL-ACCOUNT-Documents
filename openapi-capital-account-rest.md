@@ -221,7 +221,7 @@ id   | string | 成功后返回的提币申请id
 asset   | string |  提币的币种
 amount   | string|  提币数量
 address   | string|  提币地址
-addressTag   | string |  部分币种充值需用到此标签，比如XRP，EOS。
+addressTag   | string |  部分币种充值需用到此标签，比如XRP，EOS。否则输入空字符串
 chain   | string | 部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 
 
@@ -277,7 +277,7 @@ asset      | string | 是 | 充值的币种
 asset   | string | 充值的币种
 chain  | string | 部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 address   | string | 充币地址
-addressTag   | string | 部分币种充值需用到此标签，比如XRP，EOS。
+addressTag   | string | 部分币种充值需用到此标签，比如XRP，EOS。否则输入空字符串
 depositLimit   | string | 最小充值量，小于此数目的充值将不会被到账
 blockNumber   | string | 充值区块确认数
 
@@ -468,7 +468,7 @@ id   | string | 提币申请id
 asset  | string | 资产名称
 amount   | string | 提币数量
 from   | string | 提币地址
-addressTag   | string |
+addressTag   | string | 部分币种充值需用到此标签，比如XRP，EOS。否则输入空字符串
 chain   | string |部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 fee   | string | 提币手续费
 time   | string | 划转记录生成时间，国际时间
@@ -527,7 +527,7 @@ id   | string | 提币申请id
 asset  | string | 资产名称
 amount   | string | 提币数量
 from   | string | 提币地址
-addressTag   | string |
+addressTag   | string |部分币种充值需用到此标签，比如XRP，EOS。否则输入空字符串
 chain   | string |部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 fee   | string | 提币手续费
 time   | string | 划转记录生成时间，国际时间
