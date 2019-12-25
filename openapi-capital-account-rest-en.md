@@ -108,9 +108,9 @@ PreHash: 2019-10-12T09:40:19.683ZPOST/api/capital/v1/withdraw/apply {"amount": "
 
 
 ```
-Source string: 2019-05-25T03:20:30.362ZGET/api/swap/v2/account/info
+Source string: 2019-05-25T03:20:30.362ZGET/api/capital/v1/deposit/address/list
 Secret: 9daf13ebd76c4f358fc885ca6ede5e27
-Generate sign string: a02a6428bb44ad338d020c55acee9dd40bbcb3d96cbe3e48dd6185e51e232aa2
+Generate sign string: d109cbf3d496cca3972d8b4d287b5874b9b8d4271618262680719c7f15a261ea
 
 Sample code (Java version):
 * *
