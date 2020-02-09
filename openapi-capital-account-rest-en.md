@@ -656,8 +656,9 @@ Error code | message
 12007 | Invalid Content_Type, use the "application/json" format
 12008 | Request timestamp expiration
 12009 | System Error
-120011 | invalid sign
-120012 | API verification failure
+12010 | API authentication failed
+12011 | invalid sign
+12012 | API verification failure
 429 | Requests are too frequent
 11000|Parameter value is empty
 11001|Invalid Parameter value
@@ -696,8 +697,6 @@ Error code | message
 10007 | The maximum amount of money withdrawn per time should not exceed {0}
 10008 | No asset allocation found
 10009 | temporarily unable to obtain a replenishment address
-10007 | The maximum amount of money withdrawn per time should not exceed {0}
-10008 | No asset allocation found
 13002 | No asset allocation found
 
 
