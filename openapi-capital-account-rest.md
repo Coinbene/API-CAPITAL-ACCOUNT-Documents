@@ -651,6 +651,7 @@ Response:
 12007 | 无效的Content_Type，请使用“application/json”格式
 12008 | 请求时间戳过期
 12009 | 系统错误
+12010 | api 校验失败
 120011 |无效的sign
 120012 |api 校验失败
 429 |请求太频繁
