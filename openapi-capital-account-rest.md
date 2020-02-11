@@ -198,7 +198,7 @@ class TestUtil(unittest.TestCase):
 ### 私有接口-申请提币接口
 
 ```
-用于API用户申请提币
+用于API用户申请提币接口
 限速次数：1次/1秒
 HTTP POST /api/capital/v1/withdraw/apply
 ```
@@ -256,7 +256,7 @@ Response:
 
 
 ```
-获取所有合约的持仓信息
+获取充币地址列表接口
 限速规则：1次/1秒
 HTTP GET /api/capital/v1/deposit/address/list
 ```
@@ -316,9 +316,9 @@ Response:
 
 
 ```
-获取所有合约的持仓信息
+用于api用户资产划转接口
 限速规则：2次/1秒
-HTTP GET /api/capital/v1/asset/transfer
+HTTP POST /api/capital/v1/asset/transfer
 ```
 请求参数：
 
@@ -384,8 +384,8 @@ HTTP GET /api/capital/v1/asset/transfer/history/list
 名称  | 类型  | 是否必填  | 说明
 ---|---|---|---
 asset      | string | 是 | 划转的资产名称
-from      | string | 否 | 转出业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin，余币宝:financial，游乐场:game
-to      | string | 否 | 转入业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin，余币宝:financial，游乐场:game
+from      | string | 否 | 转出业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin，余币宝:financial
+to      | string | 否 | 转入业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin，余币宝:financial
 lastTransferId      | string |  | 分页使用。默认第一页传0；后续分页请求都用前一页最后一条记录id-1
 
 
@@ -396,8 +396,8 @@ lastTransferId      | string |  | 分页使用。默认第一页传0；后续分
 transferId   | string | 划转ID
 asset  | string | 资产名称
 amount   | string | 划转数量
-from   | string | 转出业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin，余币宝:financial，游乐场:game
-to   | string | 转入业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin，余币宝:financial，游乐场:game
+from   | string | 转出业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin，余币宝:financial
+to   | string | 转入业务账户，枚举值：币币:spot，btc合约:btc-contract，usdt合约:usdt-contract，杠杆:margin，余币宝:financial
 time   | string | 划转记录生成时间，国际时间
 
 
@@ -449,7 +449,7 @@ Response:
 
 ### 私有接口-查询指定提币记录接口
 ```
-获取提币申请记录列表
+获取指定提币记录信息
 限速规则：1次/1秒
 HTTP GET /api/capital/v1/withdraw/history/single
 ```
@@ -507,7 +507,7 @@ Response:
 
 ### 私有接口-查询提币记录列表接口
 ```
-获取指定提币申请记录信息
+查询提币记录列表信息
 限速规则：1次/1秒
 HTTP GET /api/capital/v1/withdraw/history/list
 ```
