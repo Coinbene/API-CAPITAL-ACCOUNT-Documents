@@ -201,7 +201,7 @@ Self. assertEqual (sn, "a02a6428bb44ad338d020c55acee9dd40bbcb3d96cbe3e48dd6185e5
 ### Private Interface - Application for Currency Drawing Interface
 
 ```
-Used for API users to apply for withdrawal of money
+Used for API users to apply for withdrawal apply
 Speed Limitation Number: 1/1 second
 HTTP POST/api/capital/v1/withdraw/apply
 ```
@@ -260,7 +260,7 @@ Response:
 
 
 ```
-Get hold information of all contracts
+query all currency addresses list information
 Speed limit rule: 1 time / 1 second
 HTTP GET/api/capital/v1/deposit/address/list
 ```
@@ -318,9 +318,9 @@ Response:
 
 
 ```
-Obtain position information of all contracts
+api user asset transfer interface
 Speed limit rule: 2 times / 1 second
-HTTP GET /api/capital/v1/asset/transfer
+HTTP POST /api/capital/v1/asset/transfer
 ```
 Request parameters:
 
@@ -379,7 +379,7 @@ Response:
 ### Private interface-query transfer record list interface
 
 ```
-Query Transfer List
+Query Transfer record information list
 Speed ​​limit rule: 1 time / 1 second
 HTTP GET  /api/capital/v1/asset/transfer/history/list
 ```
@@ -453,7 +453,7 @@ Response:
 
 ### Private interface-query the specified withdrawal record interface
 ```
-Get the list of withdrawal application records
+Get the specified withdraw record
 Speed ​​limit rule: 1 time / 1 second
 HTTP GET /api/capital/v1/withdraw/history/single
 ```
@@ -512,7 +512,7 @@ Response:
 
 ### Private interface-query the list of withdrawal records interface
 ```
-Get the specified withdrawal application record information
+Get the list of withdrawal records information
 Speed ​​limit rule: 1 time / 1 second
 HTTP GET /api/capital/v1/withdraw/history/list
 ```
@@ -584,7 +584,7 @@ Response:
 
 ### Private interface-query the list of charging records interface
 ```
-Get list of deposit records
+Get list of charging records
 Speed ​​limit rule: 1 time / 1 second
 HTTP GET /api/capital/v1/deposit/history/list
 ```
