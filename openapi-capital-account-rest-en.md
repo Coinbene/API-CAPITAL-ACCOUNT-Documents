@@ -196,7 +196,71 @@ Self. assertEqual (sn, "a02a6428bb44ad338d020c55acee9dd40bbcb3d96cbe3e48dd6185e5
 
 
 ```
+### Public interface-platform asset currency information interface
 
+```
+Get a list of all currencies on the platform, not all currencies can be used for trading.
+Speed ​​limit times: 1 time / 1 second
+HTTP GET api/capital/v1/account/currency/list
+```
+
+Request parameters: None
+
+
+Return result parameter
+
+Name | Type | Description
+--- | --- | ---
+currency | string | Currency Name, BTC
+can_deposit | string | Whether recharge, 0 means not recharge, 1 means recharge
+can_withdraw | string | Whether you can withdraw coins, 0 means you can't withdraw coins, 1 means you can withdraw coins
+min_withdrawal | string | Minimum withdrawal amount of currency
+min_deposit | string | Min Deposit
+name | string | currency Chinese name, no corresponding name if not displayed
+
+
+```
+Request:
+Url: http://domain/api/capital/v1/account/currency/list
+Method: GET
+Headers:
+Accept: application / json
+Content-Type: application / json; charset = UTF-8
+Cookie: locale = en_US
+Body:
+preHash: 2020-02-12T07:14:13.033ZGET/api/capital/v1/account/currency/list
+
+Response:
+{
+    "code": 200,
+    "data": [
+        {
+            "currency": "ABT",
+            "can_deposit": "1",
+            "can_withdraw": "1",
+            "min_withdrawal": "30",
+            "min_deposit": "1",
+            "name": "ArcBlock"
+        },
+        {
+            "currency": "ABYSS",
+            "can_deposit": "0",
+            "can_withdraw": "0",
+            "min_withdrawal": "20",
+            "min_deposit": "1",
+            "name": "ABYSS"
+        },
+        {
+            "currency": "ACT",
+            "can_deposit": "0",
+            "can_withdraw": "0",
+            "min_withdrawal": "10",
+            "min_deposit": "1",
+            "name": "Achain"
+        }
+    ]
+}
+```
 
 ### Private Interface - Application for Currency Drawing Interface
 
