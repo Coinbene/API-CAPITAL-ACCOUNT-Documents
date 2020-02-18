@@ -193,7 +193,69 @@ class TestUtil(unittest.TestCase):
 
 ```
 
+### 公共接口-平台资产币种信息接口
 
+```
+获取平台所有币种列表,并非所有币种都可被用于交易.
+限速次数：1次/1秒
+HTTP GET api/capital/v1/account/currency/list
+```
+请求参数：无
+
+
+返回结果参数
+名称   | 类型  | 说明
+---|---|---
+currency   | string | 币种名称，BTC
+can_deposit   | string |  是否可充值，0表示不可充值，1表示可以充值
+can_withdraw   | string|  是否可提币，0表示不可提币，1表示可以提币
+min_withdrawal   | string|  币种最小提币量
+min_deposit   | string | 币种最小充值
+name   | string |币种中文名称，不显示则无对应名称
+
+
+```
+Request:
+Url: http://域名/api/capital/v1/account/currency/list
+Method: GET
+Headers: 
+	Accept: application/json
+	Content-Type: application/json; charset=UTF-8
+	Cookie: locale=en_US
+Body: 
+preHash: 2020-02-12T07:14:13.033ZGET/api/capital/v1/account/currency/list
+
+Response:
+{
+    "code":200,
+    "data":[
+        {
+            "currency":"ABT",
+            "can_deposit":"1",
+            "can_withdraw":"1",
+            "min_withdrawal":"30",
+            "min_deposit":"1",
+            "name":"ArcBlock"
+        },
+        {
+            "currency":"ABYSS",
+            "can_deposit":"0",
+            "can_withdraw":"0",
+            "min_withdrawal":"20",
+            "min_deposit":"1",
+            "name":"ABYSS"
+        },
+        {
+            "currency":"ACT",
+            "can_deposit":"0",
+            "can_withdraw":"0",
+            "min_withdrawal":"10",
+            "min_deposit":"1",
+            "name":"Achain"
+        }
+    ]
+}
+```
 
 ### 私有接口-申请提币接口
 
