@@ -204,6 +204,7 @@ HTTP GET api/capital/v1/account/currency/list
 
 
 返回结果参数
+
 名称   | 类型  | 说明
 ---|---|---
 currency   | string | 币种名称，BTC
