@@ -213,7 +213,7 @@ can_deposit   | string |  是否可充值，0表示不可充值，1表示可以�
 can_withdraw   | string|  是否可提币，0表示不可提币，1表示可以提币
 min_withdrawal   | string|  币种最小提币量
 min_deposit   | string | 币种最小充值
-name   | string |币种中文名称，不显示则无对应名称
+name   | string |名称，不显示则无对应名称
 
 
 ```
