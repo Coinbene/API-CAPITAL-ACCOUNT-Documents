@@ -6,6 +6,8 @@
       * [Access restrictions](#access-restrictions)
       * [Interface type](#interface-type)
       * [Signature method](#signature-method)
+         
+         * [Public interface-platform asset currency information interface](#public-interface-platform-asset-currency-information-interface)
          * [Private Interface - Application for Currency Drawing Interface](#private-interface---application-for-currency-drawing-interface)
          * [Private Interface - Query the List of Currency Addresses](#private-interface---query-the-list-of-currency-addresses)
          * [Private interface - asset transfer interface](#private-interface---asset-transfer-interface)
@@ -13,7 +15,6 @@
          * [Private interface-query the specified withdrawal record interface](#private-interface-query-the-specified-withdrawal-record-interface)
          * [Private interface-query the list of withdrawal records interface](#private-interface-query-the-list-of-withdrawal-records-interface)
          * [Private interface-query the list of charging records interface](#private-interface-query-the-list-of-charging-records-interface)
-
       * [Error code summary](#error-code-summary)
 
 
