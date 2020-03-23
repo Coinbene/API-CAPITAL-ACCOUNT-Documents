@@ -541,7 +541,7 @@ addressTag | string | Some currencies need to use this tag, such as XRP, EOS. Ot
 chain | string | Some currencies use this field to identify different chains. Such as USDT, here the value is "ETH", "BTC"
 fee | string | Withdrawal Fee
 time | string | Time of transfer record generation, international time
-status | string | Withdrawal application status, 0: initial status; 1: frozen status; 2: successful debit; 3: cancelled status; -1: frozen failed; -2: failed charging
+status | string | Withdrawal application status, 1: Processing; 2: completed; 3: revoked
 
 
 ```
@@ -601,7 +601,7 @@ addressTag | string | Some currencies need to use this tag, such as XRP, EOS. Ot
 chain | string | Some currencies use this field to identify different chains. Such as USDT, here the value is "ETH", "BTC"
 fee | string | Withdrawal Fee
 time | string | Time of transfer record generation, international time
-status | string | Withdrawal application status, 0: initial status; 1: frozen status; 2: successful debit; 3: cancelled status; -1: frozen failed; -2: failed charging
+status | string | Withdrawal application status, 1: Processing; 2: completed; 3: revoked
 
 
 ```
@@ -669,7 +669,7 @@ asset | string | Deposit Asset
 amount | string | Credit amount
 chain | string | Some currencies use this field to identify different chains. Such as USDT, here the value is "ETH", "BTC"
 time | string | Generation time of deposit record, international time
-status | string | Deposit status, 1: successful deposit; -1: failed deposit
+status | string | Deposit status, 1: completed entered accounts ; -1: Processing
 
 
 ```
