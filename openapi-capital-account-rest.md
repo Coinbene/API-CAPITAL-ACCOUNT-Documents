@@ -668,7 +668,7 @@ asset  | string | 充币资产
 amount   | string | 充币数量
 chain   | string |部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 time   | string | 充币记录生成时间，国际时间
-status  | string | 充币状态，1:充币成功；-1:充币失败
+status  | string | 充币状态，1:已入账；-1:处理中
 txid | string | 区块转账哈希记录
 
 ```
