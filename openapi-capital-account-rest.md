@@ -536,7 +536,7 @@ addressTag   | string | 部分币种充值需用到此标签，比如XRP，EOS�
 chain   | string |部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 fee   | string | 提币手续费
 time   | string | 划转记录生成时间，国际时间
-status  | string | 提币申请状态，0:初始状态；1:冻结状态；2:扣款成功；3:撤销状态；-1:冻结失败；-2:扣款失败
+status  | string | 提币申请状态，1:处理中；2:已完成；3:已撤销
 txid | string | 区块转账哈希记录
 
 
@@ -597,7 +597,7 @@ addressTag   | string |部分币种充值需用到此标签，比如XRP，EOS。
 chain   | string |部分币种会用此字段来标识不同链。如USDT，这里值为“ETH”，“BTC”
 fee   | string | 提币手续费
 time   | string | 划转记录生成时间，国际时间
-status  | string | 提币申请状态，0:初始状态；1:冻结状态；2:扣款成功；3:撤销状态；-1:冻结失败；-2:扣款失败
+status  | string | 提币申请状态，1:处理中；2:已完成；3:已撤销
 txid | string | 区块转账哈希记录
 
 
