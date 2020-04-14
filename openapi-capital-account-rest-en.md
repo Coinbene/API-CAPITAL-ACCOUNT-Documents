@@ -764,6 +764,27 @@ Error code | message
 10008 | No asset allocation found
 10009 | temporarily unable to obtain a replenishment address
 13002 | No asset allocation found
-
+10500 | Unknown error
+10501 | The corresponding account does not exist
+10502 | The corresponding account or asset does not exist
+10503 | Pause in pause
+10504 | Pause transfer out
+10505 | The selected account does not currently support the asset
+10506 | The current account has been banned from transfer
+10507 | There is a risk that transfer has been prohibited
+10508 | The current sub-account does not support transfer
+10509 | The site does not support the account
+10520 | Transfer supports up to {0} decimal places
+10521 | The amount must be greater than {0}
+10522 | The transfer does not support this site temporarily
+10525 | Transfer between the same account is temporarily not supported
+10530 | Failed to get balance
+10531 | Insufficient account balance
+10532 | Failed to transfer out
+10533 | Transfer processing, please check the record later
+10540 | Failed to obtain trading pair for leverage account
+10541 | Parameters that need to be traded for leveraged accounts
+10542 | Please check the trading pairs or tick options
+10550 | Operation frequently, try again later
 
 
