@@ -725,6 +725,7 @@ Error code | message
 12011 | invalid sign
 12012 | API verification failure
 429 | Requests are too frequent
+431 | Disabled black user operate 
 11000|Parameter value is empty
 11001|Invalid Parameter value
 11002|The parameter value exceeds the maximum limit
